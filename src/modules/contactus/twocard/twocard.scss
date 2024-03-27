@@ -1,0 +1,54 @@
+@import "../../../style/index.scss";
+
+.twocard {
+  @include grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin: 80px 50px;
+  .card {
+    background-color: $card-background-color-grey;
+    text-align: center;
+    border-radius: 10px;
+    margin: auto 0;
+    height: 340px;
+    justify-content: center;
+    @include flex-center;
+    .card-inform {
+      .img-container {
+        margin-bottom: 20px;
+        img {
+          object-fit: cover;
+        }
+      }
+      h2 {
+        padding: 0 0 10px;
+        text-align: center;
+        @include text32px-regular;
+        color: $background-and-font-green;
+      }
+      p {
+        padding: 0 0 0px;
+        @include text16px-para;
+        max-width: 650px;
+        text-align: center;
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .twocard {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.i-frame-sec {
+  margin: 40px 0;
+  iframe {
+    width: 100%;
+    height: 500px;
+    background-color: $background-and-font-green;
+  }
+}

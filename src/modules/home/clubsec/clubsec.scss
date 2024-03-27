@@ -1,0 +1,73 @@
+@import "../../../style/index.scss";
+
+.club-sec{
+    font-family:  'Bricolage Grotesque', sans-serif;
+    padding: 90px 10px;
+
+.club-sec-grid{
+    @include grid;
+    grid-template-columns: repeat(2 ,1fr);
+    justify-content: center;
+
+    .club-sec-grid-item {
+    padding: 20px;
+        @include flex-center;
+    flex-direction: column;
+    justify-content: space-around;
+   
+    .fonth1 {
+    color: $background-and-font-green;
+    padding:  20px 0 20px;
+    @include text32px-regular;
+    font-weight: 300;
+    text-align: center;
+}
+.fontp {
+    color:  $background-and-font-green;
+    padding:  0 0 20px;
+    max-width: 352px;
+    align-items: center;
+    text-align: center;
+}
+
+}
+}
+
+
+// .club-button button {
+//     border-radius: 50px;
+    
+//     border:  none;
+//     padding: 10px 20px;
+//     color: #1c3532;
+//     background-color: #fff;
+//     transition: 0.3s ease-in-out;
+// }
+// .club-button {
+    
+//     border:  1px solid #1c3532;
+//     border-radius: 50px;
+// }
+// .club-button button:hover {
+//     background-color: #1c3532;
+//     color: var(--theme-font-color);
+// }
+}
+
+
+
+@media(max-width:767px){
+    .club-sec{
+
+        .club-sec-grid{
+            @include grid;
+            
+            grid-template-columns: repeat(1 , 1fr);
+            .club-sec-grid-item{
+
+                margin-bottom: 50px;
+            }
+        }
+    }
+    
+}

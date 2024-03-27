@@ -1,0 +1,51 @@
+@import "../theme//theme";
+@import "../typography/typography";
+.fill-button {
+  &.outline-button {
+    button {
+      transition: 0.3s ease-in-out;
+      background-color: transparent;
+      &.outline-white {
+        border: 1px solid $font-color-white;
+        color: $font-color-white;
+      }
+      &.outline-green {
+        border: 1px solid $background-and-font-green;
+        color: $background-and-font-green;
+      }
+    }
+    .outline-white:hover {
+      color: $background-and-font-green;
+      border: none;
+    }
+    .outline-green:hover {
+      color: $font-color-white;
+      background-color: $background-and-font-green;
+    }
+  }
+
+  button {
+    padding: 12px 24px;
+    @include text14px-regular;
+    line-height: 18px;
+    height: 42px;
+    border: none;
+    border-radius: 99px;
+
+    transition: 0.3s ease-in-out;
+    &.button-white {
+      color: $background-and-font-green;
+      background-color: $font-color-white;
+    }
+    &.button-green {
+      color: $font-color-white;
+      background-color: $background-and-font-green;
+      &:hover {
+        background-color: $font-color-black;
+      }
+    }
+  }
+  button:hover {
+    background-color: $button-hover-bg-color-yellow;
+  }
+}

@@ -1,0 +1,176 @@
+@import "../../../style//index.scss";
+
+footer {
+    background-color: $background-and-font-green;
+    padding: 40px 30px;
+    .footer-container{
+        @include flex;
+        flex-direction: column;
+        gap: 32px;
+        .first-section{
+            @include flex;
+            flex-direction: row-reverse;
+            gap: 22px;
+            .connected{
+                @include flex;
+                flex-direction: column;
+                gap: 16px;
+                padding-top: 20px;
+                border-top: 1px solid $border-color-grey;
+                h5{
+                    @include text20px-semibold;
+                    font-weight: 300;
+                    color: $font-color-white;
+                }
+            }
+            .footer-menu-container{
+                @include flex;
+                flex-direction: row;
+                flex-grow: 1;
+                gap: 22px;
+                border: none;
+                .menu-list{
+                    max-height: 600px;
+                    @include flex;
+                    //  width: 20%;
+                    flex-direction: column;
+                  
+                    border-top: 1px solid $border-color-grey;
+                    flex-grow: 1;
+                    .title{
+                        @include flex-center;
+                       
+                           padding: 20px 0 8px;
+                        h5{
+                             @include text20px-semibold;
+                    font-weight: 300;
+                    color: $font-color-white;
+                        }
+                        .icone-plus{
+                            display: none;
+                            width: 20px;
+                            height: 20px;
+                            position: relative;
+                            z-index: 99;
+                            .first-line{
+                                height: 4px;
+                                width: 20px;
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                border:1px solid $line-dark-color;
+                                background-color: $font-color-white;
+                            }
+                            .second-line{
+                                transform: rotate(90deg);
+                            }
+                        }
+                    }
+                    .list{
+                        display: block;
+                 .list-item{
+                    margin-bottom: 7px;
+                           a{
+                            margin-top: 10px;
+                            @include text14px-regular;
+                            color: $font-color-white;
+                            @include pointer;
+                            position: relative;
+                            // display: block;
+                        }
+                         a:after{
+                    position: absolute;
+                    content: "";
+                    height: 1px;
+                    width: 100%;
+                    bottom: -8px;
+                    left: 0;
+                    background-color: $font-color-white;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    opacity: 0;
+                    transition: 0.3s ease-in-out, transform .3s ease-out, opacity .3s ease-out;;
+                }
+            a:hover::after{
+                    opacity: 1;
+                    transform: scaleX(100%);
+                    
+                }
+                 }
+                    }
+
+                }
+            }
+        }
+        .copy-right-text{
+            @include flex;
+            flex-direction: column;
+            gap: 16px;
+            .language-select{
+                background: transparent;
+                border: none;
+                color: $font-color-white;
+                @include text14px-regular;
+                text-transform: uppercase;
+                padding-right:10px ;
+                width: 90px;
+                font-weight: 300
+            }
+            span{
+                @include text12px;
+                color: $font-color-white;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+
+
+@media(max-width:768px){
+    footer{
+        padding: 40px 20px;
+        .footer-container{
+            .first-section{
+                flex-direction: column;
+                gap: 32px;
+                .connected{
+                    padding-bottom: 20px;
+
+                }
+                .footer-menu-container{
+                    flex-direction: column;
+                    border-bottom: 1px solid $border-color-grey;
+                    gap: 0;
+                    .menu-list{
+                        // border-top: none;
+                        .title{
+                            padding: 16px 0;
+                            
+                            width: 100%;
+                        justify-content: space-between;
+                        h5{
+                            @include text16px-para;
+                        }
+                                .icone-plus{
+                                    display: block;
+                                }
+                        }
+                        .list{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .copy-right-text{
+                gap: 12px;
+                .language-select{
+                    @include text12px;
+                }
+                p{
+                    @include text10px;
+                }
+            }
+        }
+    }
+}

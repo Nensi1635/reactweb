@@ -1,0 +1,99 @@
+@import "../../../style/index.scss";
+
+.img-contain-sec{
+    position: relative;  
+    
+    
+    
+   .img-sec{
+     position: relative;
+
+     img{
+         height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+}
+.blur-div{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background: linear-gradient(0deg,#00000088,#000000ad);
+
+
+}
+
+.Arrow-container {
+    position: absolute;
+    z-index: 99;
+    bottom: 20px;
+    left: calc(50% - 18px);
+    width: 32px;
+    height: 32px;
+}
+.arrow-line-div{
+    border-left: 1px solid $font-color-white;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    animation: line-animation 2s infinite ;
+}
+.cross-img-div{
+    width: 100%;
+    height: 100%;
+    img{
+        height: 100%;
+    }
+}
+
+.inner-text-div{
+    position: absolute;
+    color: $font-color-white;
+    @include flex-center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 99;
+    .span-text{
+        @include text14px-regular;
+        word-spacing: 2px;
+    }
+.fonth1{
+    padding:  0 0 20px;
+    text-align: center;
+    @include text40px-head;
+}
+.fontp {
+    padding: 0 0 25px;
+    @include text16px-para;
+    max-width: 650px;
+    text-align: center;
+}
+}
+
+}
+
+
+@keyframes line-animation {
+    0%{
+        height: 0;
+        top:0;
+
+    }
+    50%{
+        height: 80%;
+        top: 0;
+    }
+    100%{
+        height: 0;
+        top: 80%;
+    }
+}

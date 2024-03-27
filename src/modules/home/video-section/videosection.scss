@@ -1,0 +1,122 @@
+@import '../../../style/index.scss';
+
+
+.video-contain-sec{
+    position: relative;  
+  
+   
+.fist-video-sec:hover header{
+    background-color: transparent;
+}
+
+ video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+    
+}
+.pause-button{
+    
+    position: absolute;
+    z-index: 9;
+    bottom: 20px;
+    right: 20px;
+    @include flex-center;
+    gap: 8px;
+    img{
+        width: 28px;
+        background: none;
+        object-fit: cover;
+    }
+
+}
+video:hover nav {
+    background-color: transparent;
+}
+.Arrow-container {
+    position: absolute;
+    z-index: 9;
+    bottom: 20px;
+    left: calc(50% - 18px);
+    width: 32px;
+    height: 32px;
+}
+.arrow-line-div{
+    border-left: 1px solid $font-color-white;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    animation: line-animation 2s infinite ;
+}
+.cross-img-div{
+    width: 100%;
+    height: 100%;
+}
+
+.inner-text-div{
+    position: absolute;
+    color: $font-color-white;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .span-text{
+        @include text14px-regular;
+        word-spacing: 2px;
+    }
+.fonth1{
+    padding:  0 0 20px;
+    text-align: center;
+    @include text40px-head;
+}
+.fontp {
+    padding: 0 0 25px;
+    @include text16px-para;
+    max-width: 650px;
+    text-align: center;
+}
+}
+
+// .text-sec-button button {
+//     padding: 13px 25px;
+//     border-radius: 50px;
+//     border: none;
+//     color: #000;
+//     background-color: #fff;
+// }
+// .text-sec-button button:hover {
+//     background-color: #f1c40f;
+//     color: #1c3532;
+// }
+
+}
+
+
+@keyframes line-animation {
+    0%{
+        height: 0;
+        top:0;
+
+    }
+    50%{
+        height: 80%;
+        top: 0;
+    }
+    100%{
+        height: 0;
+        top: 80%;
+    }
+}
+@media(max-width:576px){
+ button{
+        padding: 10px 15px;
+    }
+    .inner-text-div{
+        padding: 40px;
+        @include text18px-bold;
+    }
+}

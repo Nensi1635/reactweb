@@ -1,0 +1,47 @@
+@import "../../../style/index.scss";
+
+
+.card-grid{
+    @include grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 80px 40px;
+    margin-top: 60px;
+    .card-grid-item{
+        .image-contain{
+            position: relative;
+            width: 100%;
+            height: 610px;
+            object-fit: cover;
+            img{
+                border-radius: 10px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .text-card{
+            color:$font-color-black;
+            margin: 40px 0  ;
+            h3{
+                @include text32px-regular;
+                text-align: center;
+                margin: 0 0 16px;
+            }
+            .text{
+                p{
+                    @include text16px-para;
+                    margin: 0 auto;
+                    text-align: center;
+                    max-width: 530px;
+                }
+            }
+        }
+    }
+
+    @media(max-width:768px){
+        grid-template-columns: repeat(1 , 1fr);
+    }
+}

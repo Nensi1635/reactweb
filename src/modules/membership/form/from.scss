@@ -1,0 +1,104 @@
+@import "../../../style/index.scss";
+
+.form-sec{
+    .form-title{
+    padding: 3rem 0 5rem;
+    color: $font-color-black;
+    h2{
+            @include text32px-regular;
+            text-align: center;
+            margin: 0 0 16px;
+        }
+        .text{
+            @include flex;
+            justify-content: center;
+            text-align: center;
+            p{
+                @include text16px-para;
+                max-width: 56.25rem;
+            }
+        }
+
+}
+.form-design{
+    padding:  0 0 5rem;
+    color: $font-color-black;
+    .container{
+        max-width: 844px;
+        margin:  0 auto;
+        .form-grid{
+            @include grid;
+                grid-template-columns: repeat(2, 1fr);
+                 gap: 2.5rem 1.25rem;
+                 padding: 0 0 2.5rem;
+
+                 .form-grid-item{
+                    position: relative;
+                    border-bottom: 1px solid $font-color-black;
+                    label{
+                                @include text12px;
+                                color:$labal-light-color-grey;
+                                position: absolute;
+                                top: -4px;
+                                padding: 0;
+                    }
+                    input{
+                        @include text16px-para;
+                        padding: 20px 0 14px;
+                        height: 3.4375rem;
+                        border: none;
+                        border-bottom: 1px solid transparent;
+                        width: 100%;
+                        
+                    }
+                 }
+        }
+        p{
+   margin: 12px 0 0;
+   
+   @include text12px;
+   font-weight: 300;
+    span {
+    text-decoration: underline;
+
+       }
+        }
+        .btn-container{
+            margin: 40px;
+            text-align: center;
+        }
+    }
+}
+
+
+}
+
+
+@media(max-width:768px){
+    .form-sec{
+        .form-title{
+            padding: 2.5rem 1.5rem;
+            p{
+                @include text12px;
+            }
+        }
+        .form-design{
+            .container{
+                .form-grid{
+                    grid-template-columns: repeat(1 ,1fr);
+                    gap: 2rem;
+                    padding: 0 0 1.5rem;
+                    .form-grid-item{
+                        label{
+                            @include text10px;
+                        }
+                        input{
+                            @include text14px-regular;
+                            padding: 16px 0 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

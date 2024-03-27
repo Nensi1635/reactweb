@@ -1,0 +1,45 @@
+@import "../../../style/index.scss";
+
+.title-sec{
+    color: $font-color-black;
+    .container{
+        padding: 80px 0 0;
+        h2{
+            @include text38px-regular;
+            text-align: center;
+            font-weight: 300;
+            margin: 0 16px;
+        }
+        .text-p{
+            @include flex-center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 20px;
+             p{
+            @include text16px-para;
+            max-width: 881px;
+            margin: 0 0 16px;
+        }
+        }
+    }
+}
+
+
+@media(max-width:768px){
+    .title-sec{
+        .container{
+            h2{
+                @include text32px-regular;
+                max-width: 294px;
+                margin: 0 auto 16px;
+                
+            }
+              p{
+                @include text14px-regular;
+                max-width: 96%;
+                margin: 0 auto 16px;
+
+            }
+        }
+    }
+}

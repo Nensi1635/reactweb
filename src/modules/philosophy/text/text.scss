@@ -1,0 +1,31 @@
+@import "../../../style/index.scss";
+
+.text-sec{
+    color: $font-color-black;
+
+ 
+    text-align: center;
+    .container{
+        @include flex-center;
+        justify-content: center;
+        padding: 80px 0;
+        p{
+            @include text16px-para;
+            max-width: 881px;
+            margin: 0 0 16px;
+        }
+    }
+}
+
+@media(max-width:768px){
+    .text-sec{
+        .container{
+            max-width: 96%;
+            p{
+                @include text14px-regular;
+                margin: 0 auto 16px;
+
+            }
+        }
+    }
+}

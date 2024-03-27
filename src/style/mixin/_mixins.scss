@@ -1,0 +1,21 @@
+
+
+@mixin grid-item-center{
+    display: grid;
+    align-items: center;
+}
+@mixin grid
+{
+    display: grid;
+}
+
+@mixin flex-center{
+    display: flex;
+    align-items: center;    
+}
+@mixin pointer {
+    cursor: pointer;
+}
+@mixin flex{
+    display: flex;
+}
