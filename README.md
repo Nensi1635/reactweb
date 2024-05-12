@@ -1,3 +1,6 @@
+This is a design project siro which is done with scss
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
